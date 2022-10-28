@@ -1,0 +1,8 @@
+# api: executa testes especificos no ambiente de service
+api:  -p pretty -p html_report -p json_report AMBIENTE="api" -t @api
+# web: executa testes especificos no ambiente de web
+web:  -p pretty -p html_report -p json_report AMBIENTE="web" -t @web
+
+pretty: --format pretty
+html_report: --format html --out=relatorios/report.html
+json_report: --format json --out=relatorios/report.json
